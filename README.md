@@ -1,4 +1,0 @@
-## BOMMMMBOMMM CLAAAAT
-# MI BOMBOOOOO!!!!!!
-
-![alt text](public/Memory.png)
