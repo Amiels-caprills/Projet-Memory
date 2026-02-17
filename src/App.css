@@ -1,0 +1,284 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+
+
+.container-header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.container-header img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+.container-header h1 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+  letter-spacing: 8px;
+}
+
+.align {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.container-vide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+.container-vide h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.container-vide p {
+  color: black;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.container-vide a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  border-bottom: 3px solid yellow;
+  width: fit-content;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.paragraph {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 60px;
+  color: white;
+  font-size: 1.5rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonials {
+  background-color: white;
+  text-align: center;
+  padding: 100px 50px;
+  color: black;
+}
+
+.testimonials h2 {
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.testimonial img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.testimonial p {
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.testimonial h4 {
+  margin-bottom: 5px;
+}
+
+.testimonial span {
+  font-size: 0.9rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  background-color: #90d4c5;
+  text-align: center;
+  padding: 60px;
+}
+
+.footer h2 {
+  margin-bottom: 30px;
+  color: #25564b;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #25564b;
+  font-weight: bold;
+}
+
+.text-bottom {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}
+.memory-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 15px;
+  perspective: 1000px;
+}
+
+
+.card-outer {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+
+.card-outer.is-flipped .card-inner,
+.card-outer.is-matched .card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+
+.card-back {
+  background-color: #2c3e50;
+  color: white;
+}
+
+
+.card-front {
+  background-color: #ecf0f1;
+  color: #2980b9;
+  transform: rotateY(180deg);
+}
+
+
+.is-matched .card-front {
+  background-color: #90ee90;
+  color: #27ae60;
+}
